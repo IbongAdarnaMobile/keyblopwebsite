@@ -1,0 +1,199 @@
+<html>
+<title> KEYBLOP'S FUNNY WEBSITE!!</title>
+<head>
+
+    <link rel="stylesheet" href="Asthetic.css">
+    
+</head>
+<body>
+  <img class="centered" src="Capture-removebg-preview.png" width="50%" height="50%">
+  <img class="other" src="2.png" width="85%" height="50%">
+<div class="main">
+<div class="banner"></div> 
+ <div class="info">
+  <div class="always" id="infoContent"> <img src="https://media1.tenor.com/m/yheo1GGu3FwAAAAd/rick-roll-rick-ashley.gif">
+
+  </div>
+</div>  
+
+  <div class="butass">
+    <button class="bu1" data-action="artist">About the Artist</button>
+    <button class="bu2" data-action="examples">Examples</button>
+    <button class="bu3" data-action="order">Order</button>
+  </div>
+  
+    
+
+
+
+ <div id="orderModal" class="modal">
+  <div class="modal-content">
+    TBD
+    <span class="close">&times;</span>
+    <h2>Custom Art Order</h2>
+    <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      
+      <label>Art Type:</label>
+      <select name="Art Type" id="artType">
+        <option value="Sketch">Sketch ($10)</option>
+        <option value="Lineart">Lineart ($15)</option>
+        <option value="Full Color">Full Color ($25)</option>
+      </select>
+
+      <label>I forgot:</label>
+      <select name="Art Design" id="artDesign">
+        <option value="Headshot">Headshot ($10)</option>
+        <option value="bust">Bust ($15)</option>
+        <option value="Fullbody">Fullbody ($20)</option>
+      </select>
+
+      <label>Extras:</label>
+      <select name="Extras" id="extras">
+        <option value="None">None ($0)</option>
+        <option value="Background">Background ($10)</option>
+        <option value="Animation">Simple Animation ($20)</option>
+      </select>
+
+      <label>Extra Details:</label>
+      <textarea name="Extra Details" id="extraDetails" rows="4" placeholder="Tell KEYBLOP what you want! Be specific or unhinged."></textarea>
+      <label>Extra Details:</label>
+<textarea name="Contact information" rows="4" placeholder="give me your credit card number"></textarea>
+
+      <input type="hidden" name="Total Price" id="hiddenPrice">
+
+      <div class="price-display">
+        <h3>Total Price: $<span id="totalPrice">0</span></h3>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+<script>
+//but
+const infoDiv = document.getElementById("infoContent");
+const buttons = document.querySelectorAll(".butass button");
+
+document.querySelectorAll(".butass button").forEach(button => {
+  button.addEventListener("click", () => {
+    const action = button.dataset.action;
+
+    switch(action) {
+      case "artist":
+        infoDiv.innerHTML = `
+          <div class='always'>
+            <h2>About the Artist</h2>
+            <p>Silly billy</p>
+          </div>`;
+        break;
+
+      case "examples":
+        infoDiv.innerHTML = `
+          <div class='always'>
+            <h2>Examples</h2>
+            <p>GAY!</p>
+            <!-- Add images or links -->
+          </div>`;
+        break;
+
+      case "order":
+        // Show modal instead of changing content
+        document.getElementById("orderModal").style.display = "block";
+        break;
+
+    }
+  });
+});
+
+    //modal ew
+
+    const modal = document.getElementById("orderModal");
+const closeBtn = document.querySelector(".close");
+
+document.querySelector(".bu3").addEventListener("click", () => {
+  modal.style.display = "block";
+  updatePrice(); // update when opening
+});
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Pricing logic
+const prices = {
+  artType: {
+    sketch: 10,
+    lineart: 15,
+    fullcolor: 25
+  },
+  artDesign: {
+    Headshot: 10,
+    Bust: 15,
+    Fullbody: 20
+  },
+  extras: {
+    none: 0,
+    background: 10,
+    animation: 20
+  }
+};
+    //money ew
+    function updatePrice() {
+  const artType = document.getElementById("artType").value;
+  const artDesign = document.getElementById("artDesign").value;
+  const extras = document.getElementById("extras").value;
+
+  const total = prices.artType[artType.toLowerCase()] + prices.artDesign[artDesign.toLowerCase()] + prices.extras[extras.toLowerCase()];
+  document.getElementById("totalPrice").textContent = total;
+  document.getElementById("hiddenPrice").value = `$${total}`;
+}
+
+    //stars bg
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  star.style.top = `${Math.random() * window.innerHeight * 0.5}px`;
+  star.style.left = `${Math.random() * window.innerWidth}px`;
+  document.body.appendChild(star);
+
+  setTimeout(() => {
+    star.remove();
+  }, 1000); // remove after animation
+}
+
+// Occasionally fire a shooting star every 10–25 seconds
+function randomShootingStars() {
+  setInterval(() => {
+    if (Math.random() < 0.5) createShootingStar();
+  }, 10000 + Math.random() * 15000);
+}
+
+randomShootingStars();
+
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${1 + Math.random() * 2}s`;
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+
+
+    </html>

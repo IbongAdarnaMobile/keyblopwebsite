@@ -1,0 +1,316 @@
+img.centered {
+  position: absolute;
+  top: -35%;
+  left: 25%;
+  transform: translate(30%, -1%);
+  
+  max-width: 100%;
+  height: auto;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -7;
+
+  animation: spin 20s linear infinite;
+}
+
+
+/* Keyframes for spinning */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+img.other {
+  position: absolute;
+  top: -70%;
+  left: 7.1%;
+  transform: translate(70%, -8%);
+  
+  max-width: 100%;
+  height: auto;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -7;
+
+  animation: spun 30s linear infinite;
+}
+
+
+/* Keyframes for spinning */
+@keyframes spun {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* stars  */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #f7ffd6;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+
+  .shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(-45deg, white, rgba(255, 255, 255, 0));
+    transform: rotate(45deg);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    animation: shoot 1s linear forwards;
+  }
+  
+  @keyframes shoot {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) rotate(45deg) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(300px, 300px) rotate(45deg) scale(0.5);
+    }
+  }
+
+  
+
+/* font */
+@font-face {
+  font-family:typewriter;
+  src: url("JMH Typewriter.otf")
+}
+  
+/* scroll  */
+::-webkit-scrollbar {
+  width: 5px;
+  height:1px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.128); 
+  height:1px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 242, 147, 0.211); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffde70; 
+}
+
+/* cont*/
+body {
+  background-image: url("bg space.jpg");
+  background-color: #2a0e36;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  margin: auto;
+  color: white;
+  outline: 2px solid black;
+  overflow: hidden;
+  font-family: typewriter;
+}
+
+
+
+div.main {
+    margin: auto;
+    position: relative;
+    width: 50%;
+    height: 75%;
+    top: 10%;
+    border: 3px none;
+    padding: 10px;
+
+}
+
+div.banner {
+    position: relative;
+    left: -1%;
+
+
+    border: 0px double rgb(255, 226, 120);
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(50, 0, 77));
+    width: 101%;
+    height: 15%;
+    border-image: url(bo.png) 30 round;
+}
+
+div.butass {
+    position: relative;
+    top: -79.5%;
+    left: 1px;
+    border-radius: 20%;
+
+
+    border: 0px double rgb(255, 226, 120);
+    background-image: linear-gradient(rgb(33, 0, 51), rgb(59, 0, 91));
+    width: 30%;
+    height: 80%;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black,
+    2px -2px 0px black,
+    -2px 2px 0px black; 
+    font-family:typewriter;
+}
+
+div.info{
+    position: relative;
+    border-radius: 10%;
+    border-width: 1px;
+
+overflow-wrap: anywhere;
+margin-inline: 1px;
+
+    border: 0px outset rgb(255, 226, 120);
+    background-image: linear-gradient(rgb(33, 0, 51), rgb(59, 0, 91));
+color:white;
+
+    top: 2%;
+    right: -32%;
+    width: 67.8%;
+    height: 80%;
+}
+
+div.always{
+  overflow-y: scroll;
+  overflow-wrap: anywhere;
+  position: inherit;
+
+  top: 0%;
+  right: -5%;
+  width: 89.8%;
+  height: 96%;
+  z-index: 19;
+}
+
+button.bu1{
+    position: relative;
+    border-radius: 20%;
+    border-width: 1px;
+    font-family:typewriter;
+    left: 5%;
+    bottom: -10%;
+
+    border: 4px double rgb(255, 226, 120);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: 15%;
+    color:white;
+    text-shadow: 
+    1px 1px 0px black, /* Horizontal and vertical shadow with black color */
+    -1px -1px 0px black,
+    1px -1px 0px black,
+    -1px 1px 0px black; /* Creates the outline effect */
+}
+
+button.bu2{
+    position: relative;
+border-radius: 20%;
+font-family:typewriter;
+    border: 4px double rgb(255, 226, 120);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    left: 5%;
+    bottom: -25%;
+    width: 90%;
+    height: 15%;
+    color:white;
+    text-shadow: 
+    1px 1px 0px black, /* Horizontal and vertical shadow with black color */
+    -1px -1px 0px black,
+    1px -1px 0px black,
+    -1px 1px 0px black; /* Creates the outline effect */
+}
+
+button.bu3{
+    position: relative;
+    border-radius: 20%;
+    font-family:typewriter;
+    left: 5%;
+    bottom: -40%;
+
+    border: 4px double rgb(255, 226, 120);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: 15%;
+    color:white;
+    text-shadow: 
+    1px 1px 0px black, /* Horizontal and vertical shadow with black color */
+    -1px -1px 0px black,
+    1px -1px 0px black,
+    -1px 1px 0px black; /* Creates the outline effect */
+}
+
+button:hover{
+
+    background-color: rgb(0, 0, 0);
+}
+
+/* modal for thing (tbd) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #000000;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+.price-display {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
