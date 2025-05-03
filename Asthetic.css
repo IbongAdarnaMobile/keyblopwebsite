@@ -312,6 +312,11 @@ button:hover{
 }
 
 /* modal for thing (tbd) */
+
+.s1{
+position:relative;
+  z-index:5;
+}
 .modal {
   display: none;
   position: fixed;
@@ -338,7 +343,7 @@ font-family:typewriter;
 }
 
 .close {
-  color: #aaa;
+  color: #160218;
   position: absolute;
   right: 15px;
   top: 10px;
