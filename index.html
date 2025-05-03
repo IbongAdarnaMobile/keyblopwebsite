@@ -3,7 +3,7 @@
 <head>
 
     <link rel="stylesheet" href="Asthetic.css">
-    
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0, user-scalable=no">
 </head>
 <body>
   <img class="centered" src="Capture-removebg-preview.png" width="50%" height="50%">
@@ -11,8 +11,34 @@
 <div class="main">
 <div class="banner"></div> 
  <div class="info">
-  <div class="always" id="infoContent"> <img src="https://media1.tenor.com/m/yheo1GGu3FwAAAAd/rick-roll-rick-ashley.gif">
-
+  <div class="always" id="infoContent">
+    
+    <H1>Greetings !!</H1>
+    ------------------------------------------ <BR>
+     I'm _MitsKey or Key or KeyBlop depending on how you know me, and this is my commissions page! I primarily focus on doing graphic digital art, but my range can vary. I base a lot on my work on references, so when you send a commission be sure to have those ready if you want it to be as accurate as you'd like.
+<BR><br><br>
+    To have a picture on what I mostly draw at the moment and will be more experienced in, 
+    here are some of my current fandoms:
+  <br><br>  Overwatch, JJBA, Arcane, ATLA
+    <br>
+   <h1> Here are my "I Do"s and "Won't"s.</h1>
+    
+    <h3>Can Do:</h3>
+    - Humans  <br>
+    - Furries  <br>
+    - JJBA Stands  <br>
+    - Light gore  <br>
+    - Complicated poses (With refs!)  <br>
+    - Backgrounds  <br>
+    - Artistic nudity  <br>
+    
+    <h2> Won't Do:</h2>
+    - NSFW  <br>
+    - Heavy Gore  <br>
+    - Animals  <br>
+    - Anything I'm not comfortable w/ doing  <br>
+    
+   <h5> Always willing to try new styles, but keep in mind it won't always be perfect.</h5>
   </div>
 </div>  
 
@@ -28,44 +54,54 @@
 
  <div id="orderModal" class="modal">
   <div class="modal-content">
-    TBD
     <span class="close">&times;</span>
-    <h2>Custom Art Order</h2>
-    <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <h2>Order up!</h2>
+    <form id="orderForm" action="https://formspree.io/f/movdendb" method="POST">
       
       <label>Art Type:</label>
       <select name="Art Type" id="artType">
-        <option value="Sketch">Sketch ($10)</option>
-        <option value="Lineart">Lineart ($15)</option>
-        <option value="Full Color">Full Color ($25)</option>
+        <option value="sketch">Lineart ($10)</option>
+        <option value="lineart">Flat colors ($15)</option>
+        <option value="fullcolor">Fully rendered($25)</option>
       </select>
 
       <label>I forgot:</label>
       <select name="Art Design" id="artDesign">
-        <option value="Headshot">Headshot ($10)</option>
+        <option value="headshot">Headshot ($10)</option>
         <option value="bust">Bust ($15)</option>
-        <option value="Fullbody">Fullbody ($20)</option>
+        <option value="fullbody">Fullbody ($20)</option>
       </select>
+
+      <label>Number of Characters:</label>
+<select name="characterCount" id="characterCount">
+  <option value="1">1 Character ($0)</option>
+  <option value="2">2 Characters (+$10)</option>
+  <option value="3">3 Characters (+$20)</option>
+  <option value="4">4 Characters (+$30)</option>
+</select>
+
 
       <label>Extras:</label>
-      <select name="Extras" id="extras">
-        <option value="None">None ($0)</option>
-        <option value="Background">Background ($10)</option>
-        <option value="Animation">Simple Animation ($20)</option>
+      <select name="extras" id="extras">
+        <option value="none">None ($0)</option>
+        <option value="background">Scenery Background ($10)</option>
+        <option value="animation">Scenic Background ($20)</option>
       </select>
 
-      <label>Extra Details:</label>
-      <textarea name="Extra Details" id="extraDetails" rows="4" placeholder="Tell KEYBLOP what you want! Be specific or unhinged."></textarea>
-      <label>Extra Details:</label>
-<textarea name="Contact information" rows="4" placeholder="give me your credit card number"></textarea>
-
+      
+      <label>Contact information:</label><br>
+      <textarea name="Extra Details" id="extraDetails" rows="4" style="width: 353px; height: 49px;" placeholder="(ie. Discord, Gmail )" required></textarea>
+      <br><br>
+      <label>Extra Details:</label><br>
+      <textarea name="Extra Details" id="extraDetails" rows="4" style="width: 353px; height: 49px;" placeholder="Any other specific details?"></textarea>
+<br><br>
       <input type="hidden" name="Total Price" id="hiddenPrice">
 
       <div class="price-display">
         <h3>Total Price: $<span id="totalPrice">0</span></h3>
       </div>
-
-      <button type="submit">Submit Order</button>
+<br>
+      <center><button type="submit" class="cen">Submit Order</button></center>
     </form>
   </div>
 </div>
@@ -89,18 +125,63 @@ document.querySelectorAll(".butass button").forEach(button => {
     switch(action) {
       case "artist":
         infoDiv.innerHTML = `
-          <div class='always'>
-            <h2>About the Artist</h2>
-            <p>Silly billy</p>
-          </div>`;
+
+
+        <H1>Greetings !!</H1>
+    ------------------------------------------ <BR>
+     I'm _MitsKey or Key or KeyBlop depending on how you know me, and this is my commissions page! I primarily focus on doing graphic digital art, but my range can vary. I base a lot on my work on references, so when you send a commission be sure to have those ready if you want it to be as accurate as you'd like.
+<BR><br><br>
+    To have a picture on what I mostly draw at the moment and will be more experienced in, 
+    here are some of my current fandoms:
+  <br><br>  Overwatch, JJBA, Arcane, ATLA
+    <br>
+   <h1> Here are my "I Do"s and "Won't"s.</h1>
+    
+    <h3>Can Do:</h3>
+    - Humans  <br>
+    - Furries  <br>
+    - JJBA Stands  <br>
+    - Light gore  <br>
+    - Complicated poses (With refs!)  <br>
+    - Backgrounds  <br>
+    - Artistic nudity  <br>
+    
+    <h2> Won't Do:</h2>
+    - NSFW  <br>
+    - Heavy Gore  <br>
+    - Animals  <br>
+    - Anything I'm not comfortable w/ doing  <br>
+    
+   <h5> Always willing to try new styles, but keep in mind it won't always be perfect.</h5>
+       `;
         break;
 
       case "examples":
         infoDiv.innerHTML = `
           <div class='always'>
-            <h2>Examples</h2>
-            <p>GAY!</p>
-            <!-- Add images or links -->
+ <br>
+<h3>Headshot samples</h3>
+
+<img src="Pictures/head/IMG_1498.png" width="100%" height="50%">
+
+<br><br>
+<h3>Halfbody Samples</h3>
+
+<img src="Pictures/Half body/hb4.png"width="100%" height="60%" >
+<img src="Pictures/Half body/hb3.png"width="100%" height="50%" class="hor" >
+<img src="Pictures/Half body/hb2.png" width="100%" height="50%"class="hor">
+<img src="Pictures/Half body/hb1.png" width="100%" height="80%">
+
+<br><br>
+
+<h3>Fullbody samples</h3>
+<div class="image-row">
+  <img src="Pictures/full body/IMG_1569.png" alt="Fullbody 1">
+  <img src="Pictures/full body/IMG_1561.png" alt="Fullbody 2">
+  <img src="Pictures/full body/IMG_1560.png" alt="Fullbody 3">
+  <img src="Pictures/full body/IMG_1555.png" alt="Fullbody 4">
+</div>
+
           </div>`;
         break;
 
@@ -133,7 +214,6 @@ window.onclick = function (event) {
   }
 };
 
-// Pricing logic
 const prices = {
   artType: {
     sketch: 10,
@@ -141,26 +221,40 @@ const prices = {
     fullcolor: 25
   },
   artDesign: {
-    Headshot: 10,
-    Bust: 15,
-    Fullbody: 20
+    headshot: 10,
+    bust: 15,
+    fullbody: 20
   },
   extras: {
     none: 0,
     background: 10,
     animation: 20
+  },
+  characterCount: {
+    1: 0,
+    2: 10,
+    3: 20,
+    4: 30
   }
 };
+
     //money ew
     function updatePrice() {
   const artType = document.getElementById("artType").value;
   const artDesign = document.getElementById("artDesign").value;
   const extras = document.getElementById("extras").value;
+  const characterCount = document.getElementById("characterCount").value;
 
-  const total = prices.artType[artType.toLowerCase()] + prices.artDesign[artDesign.toLowerCase()] + prices.extras[extras.toLowerCase()];
+  const total =
+    prices.artType[artType.toLowerCase()] +
+    prices.artDesign[artDesign.toLowerCase()] +
+    prices.extras[extras.toLowerCase()] +
+    prices.characterCount[characterCount];
+
   document.getElementById("totalPrice").textContent = total;
   document.getElementById("hiddenPrice").value = `$${total}`;
 }
+
 
     //stars bg
 function createShootingStar() {
@@ -192,7 +286,41 @@ randomShootingStars();
       star.style.animationDuration = `${1 + Math.random() * 2}s`;
       document.body.appendChild(star);
     }
+
+document.getElementById("artType").addEventListener("change", updatePrice);
+document.getElementById("artDesign").addEventListener("change", updatePrice);
+document.getElementById("extras").addEventListener("change", updatePrice);
+document.getElementById("characterCount").addEventListener("change", updatePrice);
+
   </script>
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop default form submission
+    
+      const form = event.target;
+      const data = new FormData(form);
+    
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("🎉 Order sent! Check your email for confirmation.");
+          form.reset(); // Optionally reset the form
+        } else {
+          alert("❌ There was a problem submitting your order. Try again.");
+        }
+      })
+      .catch(error => {
+        alert("⚠️ Network error. Please try again later.");
+      });
+    });
+    </script>
+    
 </body>
 
 
